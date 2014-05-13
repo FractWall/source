@@ -1,0 +1,31 @@
+<!-- 
+ @author Johan Ekblad &lt;jka@ekblad.org&gt;
+ @license GNU GPL v2 
+-->
+
+<project name="FractWall" basedir="." default="jar">
+
+	<property name="package" value="org.ekblad.fractwall"/>
+	
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="${ant.project.name}.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="${package}.${ant.project.name}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="jar">
+        <java jar="${ant.project.name}.jar" fork="true"/>
+    </target>
+
+</project>
