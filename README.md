@@ -1,11 +1,11 @@
-source
-======
+FractWall
+=========
 
 Fractal wallpaper generator. Generate LARGE fractal images, for example if you want to create wallpaper
 
 The program is written in Java and can be built using ant.
 Execute the program with java -jar FractWall.jar [options] where options might be:
-
+``` 
  -width <int>         The width in pixels of the generated image
  -height <int>        The height in pixels of the generated image
  -xaos <filename>.xpf A save-file from the xaos fractal generator (Only the
@@ -26,7 +26,7 @@ Execute the program with java -jar FractWall.jar [options] where options might b
  -q                   Quiet, do not show calculated height so far (0...height)
  -type mandel         Type of fractal, Mandelbrot - 'mandel' is the only
                       supported for now
-
+```
 Example:
 
 java -jar FractWall.jar -width 9000 -height 4800 -ncolors 2
