@@ -4,7 +4,10 @@ FractWall
 Fractal wallpaper generator. Generate LARGE fractal images, for example if you want to create wallpaper
 
 The program is written in Java and can be built using ant.
-Execute the program with java -jar FractWall.jar [options] where options might be:
+
+Execute the program with: java -jar FractWall.jar [options]
+
+Where [options] might be:
 ``` 
  -width <int>         The width in pixels of the generated image
  -height <int>        The height in pixels of the generated image
